@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { prisma } from "../../db/prisma-client"
+import { prisma } from "../../../db/prisma-client"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -26,5 +26,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return
   }
 
-  return res.redirect(data.url)
+  return res.json(data)
 }
